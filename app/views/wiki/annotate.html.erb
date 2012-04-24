@@ -29,7 +29,7 @@
                              :action => 'show', :project_id => @project,
                              :id => @page.title, :version => line[0] %></td>
     <td class="author"><%= h(line[1]) %></td>
-    <td class="line-code"><pre><%=h line[2] %></pre></td>
+    <td class="line-code"><pre><%=h line[2].force_encoding('utf-8') %></pre></td>
 </tr>
 <% line_num += 1 %>
 <% end -%>
